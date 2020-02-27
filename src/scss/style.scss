@@ -1,0 +1,191 @@
+@import "utils/null";
+@import "utils/fonts";
+@import "utils/vars";
+@import "utils/mixins";
+
+
+html, body {
+  font-size: 14px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 1020px;
+  margin: 0 auto;
+}
+
+.header--mainpage {
+  background: url("../img/header/Heroshot 3.jpg") no-repeat center center;
+  height: 57em;
+}
+
+.logo {
+  display: flex;
+
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-text {
+      @include Font-Roboto();
+      margin-left: .5em;
+      font-size: 1.5em;
+      color: $headerWhite;
+
+    }
+  }
+
+  &__contacts:nth-child(2) {
+    margin-left: 191px;
+
+  }
+
+  &__contacts {
+    display: flex;
+
+    img {
+      max-height: 1.5em;
+    }
+
+    &-info {
+
+    }
+  }
+
+  &__sub-text {
+    @include Font-Roboto(bold);
+    font-size: .75em;
+    text-transform: uppercase;
+    color: $headerWhite;
+  }
+
+  &__sub-description {
+    margin-top: .5em;
+    color: $headerWhite;
+  }
+
+  &__button {
+    display: flex;
+    margin-left: 2.5em;
+  }
+}
+
+.new-contacts-info {
+  margin-left: .5em;
+  margin-top: .5em;
+}
+
+.new-logo {
+  padding: 2em 0 1em 0;
+}
+
+.new-logo-button {
+  &--style{
+    margin-left: 0em;
+    margin-top: 6em;
+  }
+  .button-text {
+    @include Font-Roboto(bold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    background: $buttonRed;
+    color: $headerWhite;
+    padding-left: 1.5em;
+    padding-right: .5em;
+    width: 14.3em;
+    height: 3.18em;
+
+  }
+
+  .button-shape-arrow {
+    display: flex;
+  }
+
+  .button-shape {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-bottom: 3em solid transparent;
+    border-left: 1.25em solid $buttonRed;
+  }
+
+  .button-arrow {
+    background: $buttonLightRed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      min-width: 1.5em;
+      padding: 0 1em 0 1.5em;
+    }
+  }
+}
+
+.new-logo-icon {
+}
+
+.nav {
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    background: $headerWhite;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and(max-width: 898px){
+      display: flex;
+      flex-wrap: wrap;
+    }
+    li {
+      @include Font-Roboto(bold);
+      font-size: 1em;
+      color: $headerLnk;
+      margin-right: 2.5em;
+    }
+
+    a {
+      text-decoration: none;
+      color: $blackLink;
+
+      img {
+        margin-right: 2.5em;
+        margin-left: -2em;
+      }
+    }
+
+  }
+
+  &__img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      margin-left: 1em;
+
+    }
+  }
+}
+
+.new-links {
+  padding: 1em 2.5em;
+  margin-top: 1em;
+}
+.title__content{
+  margin: 9em 0 22em;
+  h1{
+    @include Font-Roboto(900);
+    font-size: 56px;
+    color: $headerWhite;
+    width: 12em;
+  }
+}
+
+
